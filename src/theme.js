@@ -16,28 +16,27 @@ const theme = createTheme({
     components: {
         MuiTypography: {
             styleOverrides: {
-                root: {
-                    borderRadius: 5,
-                    width: '35%',
-                    color: 'white',
-                    position: 'absolute',
-                    top: '50%', left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    fontSize: '2em',
-                    border: '0.1em solid white',
-                    padding: '0.5em',
-                    backgroundColor: '#000000',
-                    opacity: '0.7',
-                    textAlign: 'center'
-                }
+                // root: {
+                //     borderRadius: 5,
+                //     width: '40%',
+                //     height: '18rem',
+                //     lineHeight: '1',
+                //     color: 'white',
+                //     position: 'absolute',
+                //     top: '50%', left: '50%',
+                //     transform: 'translate(-50%, -50%)',
+                //     transition: 'margin 0.5s ',
+                //     border: '0.1em solid white',
+                //     padding: '0.5em',
+                //     backgroundColor: '#000000',
+                //     opacity: '0.7',
+                //     textAlign: 'center',
+                //     fontSize: '2em',
+                //     textTransform: 'uppercase',
+                //     fontFamily: 'sans',
+                //     fontStyle: 'italic',
+                // }
             }
-        },
-        MuiButton: {
-            styleOverrides: {
-                outlinedSecondary: {
-                    borderRadius: 20,
-                },
-            },
         },
     },
 });
