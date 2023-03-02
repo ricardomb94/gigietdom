@@ -1,8 +1,10 @@
 import React from 'react'
 import { Grid, Typography } from '@mui/material';
 // import { Image } from 'mui-image';
-import imageUrl from '../assets/images/mariage-large.jpg';
-import { Slide, Fade } from "react-awesome-reveal";
+import imageUrl from '../assets/images/mariage-style.jpg';
+import { Fade, Slide } from "react-awesome-reveal";
+import Lottie from "lottie-react";
+import groovyWalkAnimation from "./groovyWalk.json";
 
 const styles = {
     heroContainer: {
@@ -27,26 +29,30 @@ const Header = () => {
             sx={{ textAlign: 'center' }}
         >
             {/* <Image src={imageUrl} alt="unis pour la vie" sx={{ width: '100%', height: '50vh' }} /> */}
-            <Slide left>
+            <Slide cascade>
                 <Grid item
                     sx={{
                         width: '80%',
                         margin: '0 auto',
-                        border: 'thick double green',
+                        borderRadius: '0.3em',
+                        border: 'thick double rgb(255 19 123)',
                         position: 'relative',
                         top: '10rem',
                         backgroundColor: '#FFF',
                         opacity: '0.8',
-                        padding: '6rem',
+                        padding: '7rem',
                     }}
                 >
-                    <Slide >
-                        <Typography variant="h3" sx={{ padding: '0.5rem' }}>Ogilvy et Dominique  </Typography>
-                        <hr />
-                        <Typography variant="h5">
-                            Le 16 Septembre 2023
-                        </Typography>
-                    </Slide>
+                    <Fade cascade>
+                        <Typography variant="h3" sx={{ padding: '0.3rem' }}>Ogilvy et Dominique  </Typography>
+                        <Slide cascade>
+                            <hr />
+                            <Typography variant="h5">
+                                Le 16 Septembre 2023
+                            </Typography>
+                            <Lottie animationData={groovyWalkAnimation} loop={true} style={{ width: '100%', height: '6rem' }} />
+                        </Slide>
+                    </Fade>
                 </Grid>
             </Slide>
         </Grid>
