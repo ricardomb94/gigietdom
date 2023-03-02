@@ -6,11 +6,11 @@ import Grid from '@mui/material/Unstable_Grid2';
 import { Slide } from 'react-awesome-reveal';
 
 const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : 'rgb(255 19 123)',
     ...theme.typography.body2,
     padding: theme.spacing(1),
     textAlign: 'center',
-    color: theme.palette.text.secondary,
+    color: '#fff',
 }));
 
 const Timer = () => {
@@ -20,7 +20,7 @@ const Timer = () => {
     const [seconds, setSeconds] = useState(0);
 
     const deadline = "September 16 2023";
-    const datetimes = [days, hours, minutes, seconds,]
+    // const datetimes = [days, hours, minutes, seconds,]
 
     const getTime = () => {
         const time = Date.parse(deadline) - Date.now();
@@ -39,7 +39,7 @@ const Timer = () => {
         <Slide cascade >
             <Box sx={{ flexGrow: 1 }} mt={3}>
                 <Grid container spacing={1} >
-                    <Grid xs sx={{ width: '1rem' }}>
+                    <Grid xs >
                         <Item>{days}: Jrs</Item>
                     </Grid>
                     <Grid xs>

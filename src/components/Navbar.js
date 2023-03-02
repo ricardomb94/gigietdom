@@ -1,7 +1,7 @@
 import { AppBar, Grid, Tab, Tabs, Toolbar } from '@mui/material'
 import { React, useState } from 'react'
 import { Image } from 'mui-image';
-import { Slide, Zoom } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 
 
 import logo from '../assets/images/bague.png'
@@ -13,7 +13,7 @@ const Navbar = ({ links }) => {
     })
     return (
         <AppBar style={{ background: 'rgb(11 45 61)' }}>
-            <Slide>
+            <Zoom>
                 <Toolbar >
                     <Grid container >
                         <Grid item xs={0.6} >
@@ -33,7 +33,7 @@ const Navbar = ({ links }) => {
                         <Grid item xs={3}></Grid>
                     </Grid>
                 </Toolbar>
-            </Slide>
+            </Zoom>
         </AppBar>
     )
 }
