@@ -12,7 +12,7 @@ const Navbar = ({ links }) => {
         setValue(newValue)
     })
     return (
-        <AppBar style={{ background: 'rgb(11 45 61)' }}>
+        <AppBar style={{ background: '#2F4858' }}>
             <Zoom>
                 <Toolbar >
                     <Grid container >

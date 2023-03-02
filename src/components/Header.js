@@ -31,15 +31,16 @@ const Header = () => {
                 <Grid item
                     sx={{
                         // width: '50%',
-                        height: '60vh',
+                        height: '50vh',
                         margin: '0 auto',
                         borderRadius: '0.3em',
-                        border: 'thick double rgb(255 19 123)',
+                        // border: 'thick double rgb(255 19 123)',
                         position: 'relative',
                         top: '10rem',
-                        backgroundColor: '#FFF',
-                        opacity: '0.8',
+                        backgroundColor: '#000',
+                        opacity: '0.7',
                         padding: '2rem',
+                        color: '#FFF',
                     }}
                 >
                     <Zoom >

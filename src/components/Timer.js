@@ -8,9 +8,12 @@ import { Slide } from 'react-awesome-reveal';
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : 'rgb(255 19 123)',
     ...theme.typography.body2,
-    padding: theme.spacing(1),
+    // padding: theme.spacing(1),
     textAlign: 'center',
     color: '#fff',
+    boxSizing: 'border-box',
+    padding: '1rem',
+
 }));
 
 const Timer = () => {
@@ -20,7 +23,6 @@ const Timer = () => {
     const [seconds, setSeconds] = useState(0);
 
     const deadline = "September 16 2023";
-    // const datetimes = [days, hours, minutes, seconds,]
 
     const getTime = () => {
         const time = Date.parse(deadline) - Date.now();
@@ -38,18 +40,18 @@ const Timer = () => {
     return (
         <Slide cascade >
             <Box sx={{ flexGrow: 1 }} mt={3}>
-                <Grid container spacing={1} >
+                <Grid container spacing={0.5} >
                     <Grid xs >
-                        <Item>{days}: Jrs</Item>
+                        <Item style={{ whiteSpace: 'nowrap' }}>{days}:Jr</Item>
                     </Grid>
                     <Grid xs>
-                        <Item>{hours}: Hrs</Item>
+                        <Item style={{ whiteSpace: 'nowrap' }}>{hours}:hr</Item>
                     </Grid>
                     <Grid xs>
-                        <Item>{minutes}: mn:</Item>
+                        <Item style={{ whiteSpace: 'nowrap' }}>{minutes}:mn</Item>
                     </Grid>
                     <Grid xs>
-                        <Item>{seconds}: Sde</Item>
+                        <Item style={{ whiteSpace: 'nowrap' }}>{seconds}:s</Item>
                     </Grid>
                 </Grid>
             </Box>
