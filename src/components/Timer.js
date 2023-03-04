@@ -2,7 +2,7 @@ import { React, useEffect, useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
-import { Slide, Bounce, Zoom } from 'react-awesome-reveal';
+import { Slide, Bounce, Zoom, Fade } from 'react-awesome-reveal';
 import { Divider, Stack } from '@mui/material';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -44,21 +44,18 @@ const Timer = () => {
         >
             <Stack
                 direction="row"
-                // spacing={0.5}
-                divider={<Divider orientation="vertical" sx={{ backgroundColor: '#fff' }} />}
+                spacing={0.5}
+            // divider={<Divider orientation="vertical" sx={{ backgroundColor: '#fff' }} />}
             >
-                <Slide>
+                <Fade cascade damping={0.5}>
                     <Item >{days}:Jr</Item>
-                </Slide>
-                <Bounce>
+
                     <Item >{hours}:hr</Item>
-                </Bounce>
-                <Zoom>
+
                     <Item >{minutes}:mn</Item>
-                </Zoom>
-                <Bounce>
+
                     <Item direction="right">{seconds}:s</Item>
-                </Bounce>
+                </Fade>
             </Stack>
 
         </Grid>

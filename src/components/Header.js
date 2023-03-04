@@ -55,7 +55,7 @@ const Header = () => {
                 }}
             >
                 <TypewriterComponent />
-                <Slide>
+                <Zoom cascade damping={0.3}>
                     <Typography variant="h4"
                         sx={{
                             padding: '0.3rem',
@@ -66,12 +66,12 @@ const Header = () => {
                     >
                         Ogilvy et Dominique
                     </Typography>
-                    <hr />
+                    {/* <hr /> */}
                     <Item variant="h4">
                         Le 16 Septembre 2023
                     </Item>
                     <hr />
-                </Slide>
+                </Zoom>
                 <Timer />
             </Item>
         </Stack>
