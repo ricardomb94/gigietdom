@@ -44,7 +44,7 @@ const Timer = () => {
         >
             <Stack
                 direction="row"
-                spacing={0.5}
+                // spacing={0.5}
                 divider={<Divider orientation="vertical" sx={{ backgroundColor: '#fff' }} />}
             >
                 <Slide>
