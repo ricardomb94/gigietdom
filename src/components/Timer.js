@@ -1,9 +1,9 @@
 import { React, useEffect, useState } from 'react';
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
-import { Slide } from 'react-awesome-reveal';
+import { Slide, Bounce, Zoom } from 'react-awesome-reveal';
+import { Divider, Stack } from '@mui/material';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : 'rgb(255 19 123)',
@@ -12,8 +12,8 @@ const Item = styled(Paper)(({ theme }) => ({
     textAlign: 'center',
     color: '#fff',
     boxSizing: 'border-box',
-    padding: '1rem',
-
+    padding: '1.5rem',
+    whiteSpace: 'nowrap'
 }));
 
 const Timer = () => {
@@ -38,24 +38,30 @@ const Timer = () => {
 
 
     return (
-        <Slide cascade >
-            <Box sx={{ flexGrow: 1 }} mt={3}>
-                <Grid container spacing={0.5} >
-                    <Grid xs >
-                        <Item style={{ whiteSpace: 'nowrap' }}>{days}:Jr</Item>
-                    </Grid>
-                    <Grid xs>
-                        <Item style={{ whiteSpace: 'nowrap' }}>{hours}:hr</Item>
-                    </Grid>
-                    <Grid xs>
-                        <Item style={{ whiteSpace: 'nowrap' }}>{minutes}:mn</Item>
-                    </Grid>
-                    <Grid xs>
-                        <Item style={{ whiteSpace: 'nowrap' }}>{seconds}:s</Item>
-                    </Grid>
-                </Grid>
-            </Box>
-        </Slide>
+        <Grid container
+            justifyContent="center"
+            alignItems="center"
+        >
+            <Stack
+                direction="row"
+                spacing={0.5}
+                divider={<Divider orientation="vertical" sx={{ backgroundColor: '#fff' }} />}
+            >
+                <Slide>
+                    <Item >{days}:Jr</Item>
+                </Slide>
+                <Bounce>
+                    <Item >{hours}:hr</Item>
+                </Bounce>
+                <Zoom>
+                    <Item >{minutes}:mn</Item>
+                </Zoom>
+                <Bounce>
+                    <Item direction="right">{seconds}:s</Item>
+                </Bounce>
+            </Stack>
+
+        </Grid>
     )
 }
 
