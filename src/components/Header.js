@@ -1,7 +1,7 @@
 import React from 'react'
-import { Grid, Paper, Stack, Typography } from '@mui/material';
+import { Paper, Stack, Typography } from '@mui/material';
 import imageUrl from '../assets/images/mariage-style.jpg';
-import { Bounce, Fade, Slide, Zoom } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 import { styled } from '@mui/styles';
 // import Lottie from "lottie-react";
 // import groovyWalkAnimation from "./groovyWalk.json";
@@ -39,20 +39,21 @@ const Header = () => {
             style={styles.heroContainer}
             sx={{ textAlign: 'center' }}
         >
-            <Fade cascade>
+            <Zoom cascade>
                 <Item
                     sx={{
                         // width: '50%',
                         height: '50vh',
                         margin: '0 auto',
                         borderRadius: '0.3em',
-                        // border: 'thick double rgb(255 19 123)',
+                        border: 'thick double rgb(255 19 123)',
                         position: 'relative',
                         top: '10rem',
-                        backgroundColor: '#000',
+                        backgroundColor: '#fff',
                         opacity: '0.7',
+                        paddingTop: '0.8rem',
                         padding: '1rem',
-                        color: '#FFF',
+                        color: '#000',
                     }}
                 >
                     <TypewriterComponent />
@@ -67,15 +68,15 @@ const Header = () => {
                         >
                             Ogilvy et Dominique
                         </Typography>
-                        {/* <hr /> */}
+                        <hr />
                         <Item variant="h4">
                             Le 16 Septembre 2023
                         </Item>
                         <hr />
                     </Zoom>
-                    <Timer />
+                    <Timer style={{ marginTop: '1.5rem' }} />
                 </Item>
-            </Fade>
+            </Zoom>
         </Stack>
     )
 }
