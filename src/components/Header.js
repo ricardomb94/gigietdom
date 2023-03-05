@@ -68,7 +68,7 @@ const Header = () => {
                         >
                             Ogilvy et Dominique
                         </Typography>
-                        <hr />
+                        {/* <hr /> */}
                         <Item variant="h4">
                             Le 16 Septembre 2023
                         </Item>
