@@ -74,7 +74,7 @@ const Header = () => {
                         </Item>
                         <hr />
                     </Zoom>
-                    <Timer style={{ marginTop: '1.5rem' }} />
+                    <Timer />
                 </Item>
             </Zoom>
         </Stack>
