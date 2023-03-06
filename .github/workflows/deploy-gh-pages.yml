@@ -30,8 +30,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-        run: |
-        git config --global user.name ${{secrets.USERNAME}}
-        git config --global user.email ${{secrets.EMAIL}}
-        git remote set_url origin https://${{secrets.PERSONAL_TOKEN}}@github.com/ricardomb94/gigietdom
-        npm run deploy
