@@ -19,7 +19,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const styles = {
     heroContainer: {
-        height: '76vh',
+        height: '89vh',
         backgroundImage: `url(${imageUrl})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -42,8 +42,8 @@ const Header = () => {
             <Zoom cascade>
                 <Item
                     sx={{
-                        width: '100%',
-                        height: '35vh',
+                        // width: '100%',
+                        height: '50vh',
                         margin: '0 auto',
                         borderRadius: '0.3em',
                         border: 'thick double rgb(255 19 123)',
@@ -52,7 +52,7 @@ const Header = () => {
                         backgroundColor: '#fff',
                         opacity: '0.7',
                         paddingTop: '0.8rem',
-                        padding: '1rem',
+                        padding: '0.5rem',
                         color: '#000',
                     }}
                 >

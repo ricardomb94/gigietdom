@@ -4,7 +4,7 @@ import { blue, deepPurple, grey } from "@mui/material/colors";
 const theme = createTheme({
     palette: {
         primary: {
-            main: blue[900],
+            main: '#f50057',
         },
         secondary: {
             main: grey[50],
@@ -12,6 +12,9 @@ const theme = createTheme({
         success: {
             main: deepPurple[900],
         },
+        info: {
+            main: grey[50]
+        }
     },
     components: {
         // MuiTypography: {
