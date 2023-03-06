@@ -42,8 +42,8 @@ const Header = () => {
             <Zoom cascade>
                 <Item
                     sx={{
-                        // width: '50%',
-                        height: '50vh',
+                        width: '100%',
+                        height: '35vh',
                         margin: '0 auto',
                         borderRadius: '0.3em',
                         border: 'thick double rgb(255 19 123)',
