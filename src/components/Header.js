@@ -66,7 +66,7 @@ const Header = () => {
                                 fontStyle: 'italic',
                             }}
                         >
-                            Ogilvy et Dominique
+                            Ogilvie et Dominique
                         </Typography>
                         {/* <hr /> */}
                         <Item variant="h4">
