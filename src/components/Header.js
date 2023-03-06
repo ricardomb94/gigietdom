@@ -43,7 +43,7 @@ const Header = () => {
                 <Item
                     sx={{
                         // width: '100%',
-                        height: '50vh',
+                        height: '45vh',
                         margin: '0 auto',
                         borderRadius: '0.3em',
                         border: 'thick double rgb(255 19 123)',
