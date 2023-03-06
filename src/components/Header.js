@@ -19,7 +19,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const styles = {
     heroContainer: {
-        height: 547,
+        height: '100vh',
         backgroundImage: `url(${imageUrl})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
