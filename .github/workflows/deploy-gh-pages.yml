@@ -43,6 +43,6 @@ jobs:
       - name: 'Deploy Github Pages'
         uses: ricardomb94/github-pages-deploy-action@3.7.1
         with:
-          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           BRANCH: gh-pages # <- Branche sur laquelle seront commités les fichiers
           FOLDER: build/html/ # <- Dossier contenant notre documentation générée
