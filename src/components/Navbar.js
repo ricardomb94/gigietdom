@@ -1,5 +1,6 @@
 import { AppBar, Box, Button, Grid, IconButton, Tab, Tabs, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import { React, useState } from 'react';
 import { Image } from 'mui-image';
 import { Zoom, Slide } from "react-awesome-reveal";
@@ -25,20 +26,23 @@ const Navbar = ({ links }) => {
             <Slide cascade>
                 <Toolbar >
                     <IconButton edge="start" color="inherit" aria-label="menu" >
-                        <MenuIcon sx={{backgroundColor: 'black', display:{sm:'none'}}}/>
+                        <MenuIcon sx={{backgroundColor: '#f50057', display:{sm:'none'}}}/>
                     </IconButton>
                     <Typography
                         variant="h6"
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: '#000000' }}
                     >
-                      GIGI&DOM
+                    
+                    <IconButton edge="start" color="inherit" aria-label="menu" >
+                    Ogi<FavoriteIcon sx={{color: '#f50057'}}/>Dom
+                    </IconButton>
+                      
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((navItem) => (
                         <Link to={navItem.path}
                             key={navItem.path} 
-                            // sx={{ color: '#000000' }}
                             underline="none"
                             style={{ 
                                 marginLeft:20,

@@ -48,7 +48,7 @@ const Header = () => {
                         borderRadius: '0.3em',
                         border: 'thick double rgb(255 19 123)',
                         position: 'relative',
-                        top: '10rem',
+                        top: '13rem',
                         backgroundColor: '#fff',
                         opacity: '0.7',
                         paddingTop: '0.8rem',
