@@ -35,7 +35,7 @@ const Navbar = ({ links }) => {
                     >
                     
                     <IconButton edge="start" color="inherit" aria-label="menu" >
-                    Ogi<FavoriteIcon sx={{color: '#f50057'}}/>Dom
+                    Gigi<FavoriteIcon sx={{color: '#f50057'}}/>Dom
                     </IconButton>
                       
                     </Typography>
@@ -46,7 +46,7 @@ const Navbar = ({ links }) => {
                             underline="none"
                             style={{ 
                                 marginLeft:20,
-                                color: '#000000',
+                                color: '#f50057',
                                 textDecoration:"none",
                                 textTransform: "uppercase"
                             }}
