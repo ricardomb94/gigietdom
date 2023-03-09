@@ -1,7 +1,8 @@
-import { AppBar, Grid, IconButton, Tab, Tabs, Toolbar } from '@mui/material'
-import { React, useState } from 'react'
+import { AppBar, Grid, IconButton, Tab, Tabs, Toolbar } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import { React, useState } from 'react';
 import { Image } from 'mui-image';
-import { Zoom } from "react-awesome-reveal";
+import { Zoom, Slide } from "react-awesome-reveal";
 import logo from '../assets/images/bague.png'
 import styled from '@emotion/styled';
 import { Favorite } from '@mui/icons-material';
@@ -24,18 +25,24 @@ const Navbar = ({ links }) => {
     return (
         // <AppBar style={{ background: '#2F4858' }}>
         <AppBar style={{ background: '#fff' }}>
-            <Zoom>
+            <Slide cascade>
                 <Toolbar >
+                    <IconButton edge="start" color="inherit" aria-label="menu" >
+                        <MenuIcon sx={{backgroundColor: 'black', display:{sm:'none'}}}/>
+                    </IconButton>
                     <Grid container >
                         <Grid item xs={1} >
-                            <IconButton>
+                            {/* <IconButton>
                                 <Image src={logo} alt='alliance'
                                     style={{
+                                        display:{
+                                            sm:'none'
+                                        },
                                         backgroundColor: 'rgb(255 19 123)',
                                         width: '50px',
                                         height: '50px',
                                     }} />
-                            </IconButton>
+                            </IconButton> */}
                         </Grid>
                         <Grid item xs={9} ml={5} style={{ display: 'flex', alignItems: 'center' }}>
                             <StyledTabs
@@ -51,7 +58,7 @@ const Navbar = ({ links }) => {
                         <Grid item xs={3}></Grid>
                     </Grid>
                 </Toolbar>
-            </Zoom>
+            </Slide>
         </AppBar>
     )
 }
