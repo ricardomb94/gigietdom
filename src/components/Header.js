@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paper, Stack, Typography } from '@mui/material';
+import { Divider, Paper, Stack, Typography } from '@mui/material';
 import imageUrl from '../assets/images/mariage-style.jpg';
 import { Zoom } from "react-awesome-reveal";
 import { styled } from '@mui/styles';
@@ -30,10 +30,7 @@ const styles = {
 
 const Header = () => {
     return (
-
-
-
-        <Stack direction='row'
+        <Stack direction='column'
             justifyContent="center"
             // spacing={4}
             // alignItems="right"
@@ -43,16 +40,16 @@ const Header = () => {
             <Zoom cascade>
                 <Item
                     sx={{
-                        // width: '100%',
-                        height: '45vh',
+                        width: '60%',
+                        height: '50vh',
                         margin: '0 auto',
                         borderRadius: '0.3em',
                         border: 'thick double rgb(255 19 123)',
                         position: 'relative',
-                        top: '13rem',
+                        top: '2rem',
                         backgroundColor: '#fff',
                         opacity: '0.7',
-                        paddingTop: '0.8rem',
+                        // paddingTop: '0.8rem',
                         padding: '0.5rem',
                         color: '#000',
                     }}
@@ -69,11 +66,10 @@ const Header = () => {
                         >
                             Ogilvie et Dominique
                         </Typography>
-                        {/* <hr /> */}
                         <Item variant="h4">
                             Le 16 Septembre 2023
                         </Item>
-                        <hr />
+                         <hr style={{width:'45%', marginTop:"2rem"}}/>
                     </Zoom>
                     <Timer />
                 </Item>
