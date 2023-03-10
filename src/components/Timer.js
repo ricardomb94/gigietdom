@@ -16,6 +16,8 @@ const Item = styled(Paper)(({ theme }) => ({
     whiteSpace: 'nowrap'
 }));
 
+
+
 const Timer = () => {
     const [days, setDays] = useState(0);
     const [hours, setHours] = useState(0);
@@ -36,6 +38,12 @@ const Timer = () => {
         return () => clearInterval(interval);
     }, [])
 
+    const timerTabs = [
+        {time:days, label:"Jr"},
+        {time:hours, label:"Hr"},
+        {time:minutes, label:"Mn"},
+        {time:seconds, label:"S"}
+    ]
 
     return (
         <Grid container
@@ -45,16 +53,13 @@ const Timer = () => {
             <Stack
                 direction="row"
                 spacing={0.5}
-            // divider={<Divider orientation="vertical" sx={{ backgroundColor: '#fff' }} />}
             >
                 <Fade cascade damping={0.5}>
-                    <Item >{days}:Jr</Item>
-
-                    <Item >{hours}:hr</Item>
-
-                    <Item >{minutes}:mn</Item>
-
-                    <Item direction="right">{seconds}:s</Item>
+                   {timerTabs.map((timerTab, index) => 
+                         <Item key={index}>
+                            {timerTab.time} {timerTab.label}
+                         </Item>
+                   )}
                 </Fade>
             </Stack>
 
