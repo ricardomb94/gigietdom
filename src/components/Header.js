@@ -1,7 +1,7 @@
 import React from 'react'
-import { Grid, Paper, Stack, Typography } from '@mui/material';
+import { Divider, Paper, Stack, Typography } from '@mui/material';
 import imageUrl from '../assets/images/mariage-style.jpg';
-import { Bounce, Fade, Slide, Zoom } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 import { styled } from '@mui/styles';
 // import Lottie from "lottie-react";
 // import groovyWalkAnimation from "./groovyWalk.json";
@@ -19,7 +19,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const styles = {
     heroContainer: {
-        height: 547,
+        height: '89vh',
         backgroundImage: `url(${imageUrl})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -29,30 +29,28 @@ const styles = {
 
 const Header = () => {
     return (
-
-
-
-        <Stack direction='row'
+        <Stack direction='column'
             justifyContent="center"
             // spacing={4}
             // alignItems="right"
             style={styles.heroContainer}
             sx={{ textAlign: 'center' }}
         >
-            <Fade cascade>
+            <Zoom cascade>
                 <Item
                     sx={{
-                        // width: '50%',
+                        width: '60%',
                         height: '50vh',
                         margin: '0 auto',
                         borderRadius: '0.3em',
-                        // border: 'thick double rgb(255 19 123)',
+                        border: 'thick double rgb(255 19 123)',
                         position: 'relative',
-                        top: '10rem',
-                        backgroundColor: '#000',
+                        top: '2rem',
+                        backgroundColor: '#fff',
                         opacity: '0.7',
-                        padding: '1rem',
-                        color: '#FFF',
+                        // paddingTop: '0.8rem',
+                        padding: '0.5rem',
+                        color: '#000',
                     }}
                 >
                     <TypewriterComponent />
@@ -65,17 +63,16 @@ const Header = () => {
                                 fontStyle: 'italic',
                             }}
                         >
-                            Ogilvy et Dominique
+                            Ogilvie et Dominique
                         </Typography>
-                        {/* <hr /> */}
                         <Item variant="h4">
                             Le 16 Septembre 2023
                         </Item>
-                        <hr />
+                         <hr style={{width:'45%', marginTop:"2rem"}}/>
                     </Zoom>
                     <Timer />
                 </Item>
-            </Fade>
+            </Zoom>
         </Stack>
     )
 }

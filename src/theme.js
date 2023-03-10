@@ -4,7 +4,7 @@ import { blue, deepPurple, grey } from "@mui/material/colors";
 const theme = createTheme({
     palette: {
         primary: {
-            main: blue[900],
+            main: '#f50057',
         },
         secondary: {
             main: grey[50],
@@ -12,8 +12,27 @@ const theme = createTheme({
         success: {
             main: deepPurple[900],
         },
+        info: {
+            main: grey[50]
+        }
     },
     components: {
+        // MuiCard:{
+        //     styleOverrides:{
+        //         root: {
+        //             maxWidth: 345,
+        //             [theme.breakpoints.down('sm')]: {
+        //               maxWidth: '100%',
+        //             },
+        //           },
+        //           media: {
+        //             height: 140,
+        //             [theme.breakpoints.down('sm')]: {
+        //               height: 200,
+        //             },
+        //           },
+        //     }
+        // }
         // MuiTypography: {
         //     styleOverrides: {
         // root: {

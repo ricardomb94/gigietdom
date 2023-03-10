@@ -2,8 +2,8 @@ import { React, useEffect, useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
-import { Slide, Bounce, Zoom, Fade } from 'react-awesome-reveal';
-import { Divider, Stack } from '@mui/material';
+import { Fade } from 'react-awesome-reveal';
+import { Stack } from '@mui/material';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : 'rgb(255 19 123)',
@@ -12,9 +12,11 @@ const Item = styled(Paper)(({ theme }) => ({
     textAlign: 'center',
     color: '#fff',
     boxSizing: 'border-box',
-    padding: '0.5rem',
+    padding: '1.3em',
     whiteSpace: 'nowrap'
 }));
+
+
 
 const Timer = () => {
     const [days, setDays] = useState(0);
@@ -36,6 +38,12 @@ const Timer = () => {
         return () => clearInterval(interval);
     }, [])
 
+    const timerTabs = [
+        {time:days, label:"Jr"},
+        {time:hours, label:"Hr"},
+        {time:minutes, label:"Mn"},
+        {time:seconds, label:"S"}
+    ]
 
     return (
         <Grid container
@@ -45,16 +53,13 @@ const Timer = () => {
             <Stack
                 direction="row"
                 spacing={0.5}
-            // divider={<Divider orientation="vertical" sx={{ backgroundColor: '#fff' }} />}
             >
                 <Fade cascade damping={0.5}>
-                    <Item >{days}:Jr</Item>
-
-                    <Item >{hours}:hr</Item>
-
-                    <Item >{minutes}:mn</Item>
-
-                    <Item direction="right">{seconds}:s</Item>
+                   {timerTabs.map((timerTab, index) => 
+                         <Item key={index}>
+                            {timerTab.time} {timerTab.label}
+                         </Item>
+                   )}
                 </Fade>
             </Stack>
 

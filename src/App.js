@@ -2,15 +2,23 @@ import React from 'react'
 // import ImageCard from './components/ImageCard'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
-
-const LinksArray = ["Accueil", "Notre histoire", "Ceremonie", "Localisation"]
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Ceremony from "./pages/Ceremony";
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { Box } from '@mui/material';
 
 const App = () => {
     return (
-        <div className='App'>
-            <Navbar links={LinksArray} />
-            <Header />
-        </div>
+            <Router>
+                <Navbar />
+                <Header />
+                    <Routes>
+                        <Route exact path="/" element={<About/>}/>
+                        <Route path="/contact" element={<Contact/>}/>
+                        <Route path="/ceremony" element={<Ceremony/>}/>
+                    </Routes>
+            </Router>
     )
 }
 

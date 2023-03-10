@@ -1,39 +1,64 @@
-import { AppBar, Grid, Tab, Tabs, Toolbar } from '@mui/material'
-import { React, useState } from 'react'
-import { Image } from 'mui-image';
-import { Zoom } from "react-awesome-reveal";
+import { AppBar, Box, Button, Grid, IconButton, Tab, Tabs, Toolbar, Typography } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import { React, useState } from 'react';
+// import { Image } from 'mui-image';
+import { Slide } from "react-awesome-reveal";
+// import logo from '../assets/images/bague.png'
+// import styled from '@emotion/styled';
+// import { Favorite } from '@mui/icons-material';
+// import { pink } from '@mui/material/colors';
+import { Link } from 'react-router-dom';
 
 
-import logo from '../assets/images/bague.png'
+// const StyledTabs = styled(Tabs)(({ theme }) => ({
+//     [theme.breakpoints.down("sm")]: {
+//         display: 'none',
+//         backgroundColor: 'white'
+//     }
+// }))
+
+const navItems = [{path:"/", label:"Notre histoire"}, {path:"/ceremony", label:"Cérémonie"}, {path:"/contact", label:"Contact"}]
 
 const Navbar = ({ links }) => {
-    const [value, setValue] = useState(0);
-    const handleChange = ((e, newValue) => {
-        setValue(newValue)
-    })
     return (
-        <AppBar style={{ background: '#2F4858' }}>
-            <Zoom>
+        <AppBar style={{ background: '#fff' }}>
+            <Slide cascade>
                 <Toolbar >
-                    <Grid container >
-                        <Grid item xs={0.6} >
-                            <Image src={logo} alt='alliance' style={{ backgroundColor: 'rgb(255 19 123)' }} />
-                        </Grid>
-                        <Grid item xs={7} ml={5}>
-                            <Tabs
-                                indicatorColor='secondary'
-                                textColor='inherit'
-                                value={value}
-                                onChange={handleChange}>
-                                {links.map((link, i) =>
-                                    <Tab key={i} label={link} />
-                                )}
-                            </Tabs>
-                        </Grid>
-                        <Grid item xs={3}></Grid>
-                    </Grid>
+                    <IconButton edge="start" color="inherit" aria-label="menu" >
+                        <MenuIcon sx={{backgroundColor: '#f50057', display:{sm:'none'}}}/>
+                    </IconButton>
+                    <Typography
+                        variant="h6"
+                        component="div"
+                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: '#000000' }}
+                    >
+                    
+                    <IconButton edge="start" color="inherit" aria-label="menu" >
+                    Gigi<FavoriteIcon sx={{color: '#f50057'}}/>Dom
+                    </IconButton>
+                      
+                    </Typography>
+                    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                       {navItems.map((navItem) => (
+                       <Button key={navItem.path} >
+                        <Link to={navItem.path}
+                            underline="none"
+                            style={{ 
+                                marginLeft:20,
+                                color: '#f50057',
+                                textDecoration:"none",
+                                textTransform: "uppercase"
+                            }}
+                          >
+                            {navItem.label}
+                        </Link>
+                       </Button>
+                     ))
+                    }
+                    </Box>  
                 </Toolbar>
-            </Zoom>
+            </Slide>
         </AppBar>
     )
 }
