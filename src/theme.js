@@ -17,6 +17,22 @@ const theme = createTheme({
         }
     },
     components: {
+        // MuiCard:{
+        //     styleOverrides:{
+        //         root: {
+        //             maxWidth: 345,
+        //             [theme.breakpoints.down('sm')]: {
+        //               maxWidth: '100%',
+        //             },
+        //           },
+        //           media: {
+        //             height: 140,
+        //             [theme.breakpoints.down('sm')]: {
+        //               height: 200,
+        //             },
+        //           },
+        //     }
+        // }
         // MuiTypography: {
         //     styleOverrides: {
         // root: {
