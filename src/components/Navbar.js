@@ -2,12 +2,12 @@ import { AppBar, Box, Button, Grid, IconButton, Tab, Tabs, Toolbar, Typography }
 import MenuIcon from '@mui/icons-material/Menu';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { React, useState } from 'react';
-import { Image } from 'mui-image';
-import { Zoom, Slide } from "react-awesome-reveal";
-import logo from '../assets/images/bague.png'
-import styled from '@emotion/styled';
-import { Favorite } from '@mui/icons-material';
-import { pink } from '@mui/material/colors';
+// import { Image } from 'mui-image';
+import { Slide } from "react-awesome-reveal";
+// import logo from '../assets/images/bague.png'
+// import styled from '@emotion/styled';
+// import { Favorite } from '@mui/icons-material';
+// import { pink } from '@mui/material/colors';
 import { Link } from 'react-router-dom';
 
 
@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 //     }
 // }))
 
-const navItems = [{path:"/", label:"Accueil"}, {path:"/About", label:"Notre histoire"}, {path:"/Ceremony", label:"Cérémonie"}]
+const navItems = [{path:"/", label:"Notre histoire"}, {path:"/ceremony", label:"Cérémonie"}, {path:"/contact", label:"Contact"}]
 
 const Navbar = ({ links }) => {
     return (
@@ -40,9 +40,9 @@ const Navbar = ({ links }) => {
                       
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        {navItems.map((navItem) => (
+                       {navItems.map((navItem) => (
+                       <Button key={navItem.path} >
                         <Link to={navItem.path}
-                            key={navItem.path} 
                             underline="none"
                             style={{ 
                                 marginLeft:20,
@@ -53,6 +53,7 @@ const Navbar = ({ links }) => {
                           >
                             {navItem.label}
                         </Link>
+                       </Button>
                      ))
                     }
                     </Box>  

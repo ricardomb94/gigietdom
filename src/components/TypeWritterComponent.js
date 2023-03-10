@@ -5,7 +5,7 @@ import TypewriterComponent from 'typewriter-effect';
 
 const TypeWritterComponent = () =>
 
-    <Zoom >
+    // <Zoom >
         <TypewriterComponent
             option={{
                 string: ['Mariage', 'Officiel'],
@@ -17,7 +17,7 @@ const TypeWritterComponent = () =>
                     .start();
             }}
         />
-    </Zoom>
+    // </Zoom>
 
 
 
