@@ -24,6 +24,7 @@ const styles = {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         textAlign: 'center',
+        marginBottom:'8rem'
     }
 };
 

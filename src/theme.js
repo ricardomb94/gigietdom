@@ -17,6 +17,13 @@ const theme = createTheme({
         }
     },
     components: {
+        MuiTypography:{
+            styleOverrides:{
+                root: {
+                    fontFamily: "Segoe UI Emoji"
+                }
+            }
+        }
         // MuiTypography: {
         //     styleOverrides: {
         // root: {
