@@ -9,8 +9,8 @@ const TypeWritterComponent = () =>
         <TypewriterComponent
             option={{
                 string: ['Mariage', 'Officiel'],
-                autoStart: true,
-                loop: true
+                autoStart: false,
+                loop: false
             }}
             onInit={(typewriter) => {
                 typewriter.typeString('Mariage Officiel!')

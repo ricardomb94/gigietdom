@@ -5,10 +5,9 @@ import ImageCard from '../components/ImageCard'
 const About = () => {
   return (
     <Box 
-      direction="row"
       sx={{backgoundColor: "rgb(230 230 230)"}} 
       >
-      <Box item>
+      <Box >
         <ImageCard/>
       </Box>
     </Box>

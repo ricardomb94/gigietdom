@@ -16,7 +16,7 @@ const Item = styled(Paper)(({ theme }) => ({
   }));
 
   const StyledGrid = styled(Grid)(({ theme }) => ({
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
         direction:"column",
         backgroundColor:"green",
         columnSpacing:1,
@@ -39,8 +39,8 @@ const ImageCard = () => {
             marginBottom:2, 
             mx:8,
             [theme.breakpoints.down("xs")]:{
-                marginLeft:"20px",
-                marginRight:"20px"
+                marginLeft:"10px",
+                marginRight:"10px"
             }
         }} 
             >
@@ -50,22 +50,19 @@ const ImageCard = () => {
             columnSpacing={3} 
             mt={10}
             sx={{
-                [theme.breakpoints.up(" xs")]:{
-                    direction:"column",
+                flexDirection: { xs: "column", sm: "row"},
+                [theme.breakpoints.down("xs")]:{
                     backgroundColor:"red",
-                    columnSpacing:1,
-                    Grid:{
-                        direction:"column",
-                    }
+                    
                    
                 }
             }}
             >
             <Grid item xs={6}>
                     <Card sx={{
-                        maxWidth: 1400 ,
-                        [theme.breakpoints.down('sm')]: {
-                            maxWidth:250
+                        
+                        [theme.breakpoints.down('xs')]: {
+                            backgroundColor:"cyan",
                           },
                         }}>
                         <CardMedia
@@ -76,7 +73,7 @@ const ImageCard = () => {
                             sx={{
                                 maxWidth: 1400 ,
                                 [theme.breakpoints.down('sm')]: {
-                                    height:"250"
+                                    height:"550"
                                   },  
                             }}
                         />
@@ -84,18 +81,20 @@ const ImageCard = () => {
             </Grid>
             <Grid 
                 item xs={6} 
-                sx={{padding:5,
+                sx={{
+                    marginTop:"6rem",
+                    padding:1,
                     [theme.breakpoints.down('sm')]: {
                        padding: 0,
-                       
+                       marginTop:"1rem",
                       },  
                 }}>
                     <img src={decoImg} alt="decoration" />
                     <CardContent 
                         mt={3}
                         // sx={{
-                        //     [theme.breakpoints.down('xs')]: {
-                        //         height:"250"
+                        //     [theme.breakpoints.up('xs')]: {
+                        //         fontSize:"20"
                         //       },  
                         // }} 
                         >
@@ -120,13 +119,20 @@ const ImageCard = () => {
                             sx={{
                                 textAlign:'match-parent', 
                                 marginTop:5, 
-                                fontSize:"1.1em",
-                                [theme.breakpoints.up('sm')]: {
+                                // fontSize:"1.5em",
+                                [theme.breakpoints.down('sx')]: {
                                     fontSize:"0.95em",
-                                    height:250
+                                    height:200
                                   },  
                                 }}>
-                         La vie est un sommeil et l'amour en est le rêve. Vous aurez vécu si vous avez aimé. Dans cette belle perspective poétique Ogilvie et Dominique se sont d'un commun accord engagé de s'unir devant Dieu et devant les Hommes par le lien du mariage. Que dire sinon vous souhaiter toute les belles choses que ce monde peut offrire..
+                         La vie est un sommeil et l'amour en est le rêve. 
+                         Vous aurez vécu si vous avez aimé. 
+                         Dans cette belle perspective poétique 
+                         Ogilvie et Dominique se sont d'un commun
+                         accord engagé de s'unir devant Dieu et devant les
+                         Hommes par le lien du mariage. Que dire 
+                         sinon vous souhaiter toute les belles choses que
+                         ce monde peut offrire..
                         </Typography>
                     </CardContent>
             </Grid>
