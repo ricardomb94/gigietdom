@@ -8,8 +8,8 @@ import theme from '../theme'
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : 'rgb(230 230 230)"',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
+    // ...theme.typography.body2,
+    // padding: theme.spacing(1),
     // textAlign: 'center',
     color: theme.palette.text.secondary,
     fontFamily: theme.palette.text.fontFamily
@@ -103,7 +103,7 @@ const ImageCard = () => {
                             variant="h3" 
                             component="div" 
                             sx={{
-                                [theme.breakpoints.down("sm")]:{
+                                [theme.breakpoints.down("xs")]:{
                                     typography:{
                                         h3:{fontSize:"0.8"}
                                     }
@@ -125,14 +125,14 @@ const ImageCard = () => {
                                     height:200
                                   },  
                                 }}>
-                         La vie est un sommeil et l'amour en est le rêve. 
-                         Vous aurez vécu si vous avez aimé. 
-                         Dans cette belle perspective poétique 
-                         Ogilvie et Dominique se sont d'un commun
-                         accord engagé de s'unir devant Dieu et devant les
-                         Hommes par le lien du mariage. Que dire 
-                         sinon vous souhaiter toute les belles choses que
-                         ce monde peut offrire..
+                            La vie est un sommeil et l'amour en est le rêve. 
+                            Vous aurez vécu si vous avez aimé. 
+                            Dans cette belle perspective poétique 
+                            Ogilvie et Dominique se sont d'un commun
+                            accord engagé de s'unir devant Dieu et devant les
+                            Hommes par le lien du mariage. Que dire 
+                            sinon vous souhaiter toute les belles choses que
+                            ce monde peut offrire.
                         </Typography>
                     </CardContent>
             </Grid>
@@ -145,4 +145,3 @@ export default ImageCard
 
 
 
-// Le témoignage de votre engagement est un bel exemple d'humanité et d'affection mutuelle et vous avez notre bénédiction. Que la fidélité, l'amour, le bonheur, la santé et la prospérité vous accompagne tout au long de cette belle aventure humaine
