@@ -44,7 +44,7 @@ const CustomCard = () => {
               flexDirection: "column",
               alignItems: "center",
               maxWidth: "1%",
-              height: "100vh"
+              // height: "100vh"
           }
             }}>
           <Box sx={{ display: 'flex' }}>
@@ -57,7 +57,7 @@ const CustomCard = () => {
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center'}}>
           <CardContent
-            sx={{ width: 377 }}
+            sx={{ width: 320 }}
           >
             <img src={decoImg} alt="decoration" />
                 <Typography gutterBottom variant="h3" component="div">
