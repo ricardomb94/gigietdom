@@ -7,6 +7,7 @@ import { styled } from '@mui/styles';
 // import groovyWalkAnimation from "./groovyWalk.json";
 import Timer from "./Timer"
 import TypewriterComponent from './TypeWritterComponent'
+import theme from "../theme"
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -24,6 +25,7 @@ const styles = {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         textAlign: 'center',
+        marginBottom:'8rem'
     }
 };
 
@@ -51,6 +53,9 @@ const Header = () => {
                         // paddingTop: '0.8rem',
                         padding: '0.5rem',
                         color: '#000',
+                        [theme.breakpoints.down('sm')]: {
+                            width:"90%"
+                          },  
                     }}
                 >
                     <TypewriterComponent />

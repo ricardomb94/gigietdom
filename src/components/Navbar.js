@@ -29,6 +29,7 @@ const Navbar = ({ links }) => {
                         <MenuIcon sx={{backgroundColor: '#f50057', display:{sm:'none'}}}/>
                     </IconButton>
                     <Typography
+                        fontFamily="'Montserrat'"
                         variant="h6"
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: '#000000' }}
@@ -44,11 +45,13 @@ const Navbar = ({ links }) => {
                        <Button key={navItem.path} >
                         <Link to={navItem.path}
                             underline="none"
+                            // fontFamily="'Montserrat'"
                             style={{ 
                                 marginLeft:20,
                                 color: '#f50057',
                                 textDecoration:"none",
-                                textTransform: "uppercase"
+                                textTransform: "uppercase",
+                                fontFamily:"'Montserrat'"
                             }}
                           >
                             {navItem.label}
