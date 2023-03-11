@@ -44,7 +44,7 @@ const CustomCard = () => {
               flexDirection: "column",
               alignItems: "center",
               maxWidth: "1%",
-              height: "50vh"
+              height: "100vh"
           }
             }}>
           <Box sx={{ display: 'flex' }}>
@@ -57,13 +57,13 @@ const CustomCard = () => {
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center'}}>
           <CardContent
-            sx={{ width: 450 }}
+            sx={{ width: 377 }}
           >
             <img src={decoImg} alt="decoration" />
                 <Typography gutterBottom variant="h3" component="div">
                     Our Story
                 </Typography>
-                <Typography variant="body2" color="text.secondary" sx={{fontSize:"1.2em"}}>
+                <Typography variant="body2" color="text.secondary" sx={{fontSize:"1.2em", textAlign:"justify"}}>
                         La vie est un sommeil et l'amour en est le rêve. 
                         Vous aurez vécu si vous avez aimé. 
                         Dans cette belle perspective poétique 
