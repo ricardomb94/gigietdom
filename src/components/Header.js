@@ -1,12 +1,11 @@
 import React from 'react'
-import { Divider, Paper, Stack, Typography } from '@mui/material';
+import { Paper, Stack, Typography } from '@mui/material';
 import imageUrl from '../assets/images/mariage-style.jpg';
 import { Zoom } from "react-awesome-reveal";
 import { styled } from '@mui/styles';
-// import Lottie from "lottie-react";
-// import groovyWalkAnimation from "./groovyWalk.json";
 import Timer from "./Timer"
 import TypewriterComponent from './TypeWritterComponent'
+import Navbar from "./Navbar"
 import theme from "../theme"
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -31,13 +30,13 @@ const styles = {
 
 const Header = () => {
     return (
-        <Stack direction='column'
+        <>
+        <Navbar/>
+          <Stack direction='column'
             justifyContent="center"
-            // spacing={4}
-            // alignItems="right"
             style={styles.heroContainer}
             sx={{ textAlign: 'center' }}
-        >
+         >
             <Zoom cascade>
                 <Item
                     sx={{
@@ -50,7 +49,6 @@ const Header = () => {
                         top: '2rem',
                         backgroundColor: '#fff',
                         opacity: '0.7',
-                        // paddingTop: '0.8rem',
                         padding: '0.5rem',
                         color: '#000',
                         [theme.breakpoints.down('sm')]: {
@@ -79,6 +77,7 @@ const Header = () => {
                 </Item>
             </Zoom>
         </Stack>
+      </>
     )
 }
 

@@ -23,11 +23,11 @@ const CustomCard = () => {
         direction="row"
         justifyContent="space-around"
         alignContent="center"
+        marginBottom="8rem"
         sx={{
           flexDirection: { xs: "column", sm: "row"},
           [theme.breakpoints.down("xs")]:{
             flexDirection: "column",
-            backgroundColor:"red"
         }
         }}
     >
