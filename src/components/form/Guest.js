@@ -85,23 +85,6 @@ const Guest = () => {
        width: "75%"
       }}>
     <Grid>
-       {/* <Typography 
-        variant="h5" 
-        textAlign="center"
-        marginTop={5}
-        color="primary"
-        >
-          confirmez vontre présence avant le 26 juin
-      </Typography> */}
-      {/* <Typography 
-        variant="subtitle2" 
-        textAlign="center"
-        marginTop={2}
-        component='p' 
-        sx={{marginBottom:'10px'}}
-         >
-          Veuillez remplir le formulaire s'il vous plait!
-      </Typography> */}
     </Grid>
     <FormGroup
       style ={{width: '80%', margin:'0 auto', paddingTop:'2rem' }}
