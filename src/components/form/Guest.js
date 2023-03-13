@@ -4,6 +4,8 @@ import imageSrc from '../../assets/images/reservation.jpg'
 import decoImg from '../../assets/images/decoration.png'
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import theme from './theme'
+import AgeSelect from './AgeSelect';
+import CheckConfirmation from './CheckConfirmation';
 
 
 
@@ -74,7 +76,7 @@ const Guest = () => {
         marginBottom={5}
         color="secondary"
         >
-          Invitation
+          Cher/es invité/es<br/> Veuillez confirmer votre présence avant le 26 juin
       </Typography>
       </Grid>
      <Paper sx={{
@@ -83,15 +85,15 @@ const Guest = () => {
        width: "75%"
       }}>
     <Grid>
-       <Typography 
+       {/* <Typography 
         variant="h5" 
         textAlign="center"
         marginTop={5}
         color="primary"
         >
-          Pour confirmez vontre présence
-      </Typography>
-      <Typography 
+          confirmez vontre présence avant le 26 juin
+      </Typography> */}
+      {/* <Typography 
         variant="subtitle2" 
         textAlign="center"
         marginTop={2}
@@ -99,14 +101,15 @@ const Guest = () => {
         sx={{marginBottom:'10px'}}
          >
           Veuillez remplir le formulaire s'il vous plait!
-      </Typography>
+      </Typography> */}
     </Grid>
     <FormGroup
-      style ={{width: '50%', margin:'0 auto', }}
+      style ={{width: '80%', margin:'0 auto', paddingTop:'2rem' }}
       onSubmit={handleSubmit}
       >
+    <CheckConfirmation marginBottom={5}/>    
     <TextField
-        style ={{marginBottom:'15px'}}
+        style ={{marginBottom:'20px', marginTop:'10px'}}
         label='Nom'
         placeholder='Votre nom'
         value={lastname}
@@ -116,7 +119,7 @@ const Guest = () => {
         required
        />
     <TextField
-        style ={{marginBottom:'15px'}}
+        style ={{marginBottom:'20px'}}
         label='Prénom'
         placeholder='Votre prénom'
         InputProps={{ name: 'firstname' }}
@@ -126,7 +129,7 @@ const Guest = () => {
        />
         {/* <br></br> */}
      <TextField
-        style ={{marginBottom:'15px', marginTop:'2px'}}
+        style ={{marginBottom:'20px', marginTop:'2px'}}
         label='E-mail'
         placeholder='Votre e-mail'
         value={email}
@@ -139,6 +142,7 @@ const Guest = () => {
         variant="outlined"
         >
       </FormControl>
+      <AgeSelect/>
       <Grid item>
           <Button
             onClick={onCreate}
@@ -151,7 +155,7 @@ const Guest = () => {
             }}
             // className={classes.submit}
           >
-            Créer mon compte
+            Réserver
           </Button>
         </Grid>
       </FormGroup>
