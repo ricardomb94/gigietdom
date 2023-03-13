@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/gigietdom/static/js/main.fe25e7ae.js",
+    "static/media/mariage-style.jpg": "/gigietdom/static/media/mariage-style.1077f47bc981a4ad6d77.jpg",
+    "static/media/reservation.jpg": "/gigietdom/static/media/reservation.dbd243c475b4648137ff.jpg",
+    "static/media/couple-2.jpg": "/gigietdom/static/media/couple-2.9c3c0fd1d5df10b6b3a6.jpg",
+    "index.html": "/gigietdom/index.html",
+    "main.fe25e7ae.js.map": "/gigietdom/static/js/main.fe25e7ae.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.fe25e7ae.js"
+  ]
+}
