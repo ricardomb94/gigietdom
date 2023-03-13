@@ -4,6 +4,8 @@ import imageSrc from '../../assets/images/reservation.jpg'
 import decoImg from '../../assets/images/decoration.png'
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import theme from './theme'
+import AgeSelect from './AgeSelect';
+import CheckConfirmation from './CheckConfirmation';
 
 
 
@@ -105,8 +107,9 @@ const Guest = () => {
       style ={{width: '80%', margin:'0 auto', paddingTop:'2rem' }}
       onSubmit={handleSubmit}
       >
+    <CheckConfirmation marginBottom={5}/>    
     <TextField
-        style ={{marginBottom:'15px'}}
+        style ={{marginBottom:'20px', marginTop:'10px'}}
         label='Nom'
         placeholder='Votre nom'
         value={lastname}
@@ -116,7 +119,7 @@ const Guest = () => {
         required
        />
     <TextField
-        style ={{marginBottom:'15px'}}
+        style ={{marginBottom:'20px'}}
         label='Prénom'
         placeholder='Votre prénom'
         InputProps={{ name: 'firstname' }}
@@ -126,7 +129,7 @@ const Guest = () => {
        />
         {/* <br></br> */}
      <TextField
-        style ={{marginBottom:'15px', marginTop:'2px'}}
+        style ={{marginBottom:'20px', marginTop:'2px'}}
         label='E-mail'
         placeholder='Votre e-mail'
         value={email}
@@ -139,6 +142,7 @@ const Guest = () => {
         variant="outlined"
         >
       </FormControl>
+      <AgeSelect/>
       <Grid item>
           <Button
             onClick={onCreate}
