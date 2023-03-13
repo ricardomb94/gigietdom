@@ -74,7 +74,7 @@ const Guest = () => {
         marginBottom={5}
         color="secondary"
         >
-          Invitation
+          Cher/es invité/es<br/> Veuillez confirmer votre présence avant le 26 juin
       </Typography>
       </Grid>
      <Paper sx={{
@@ -83,15 +83,15 @@ const Guest = () => {
        width: "75%"
       }}>
     <Grid>
-       <Typography 
+       {/* <Typography 
         variant="h5" 
         textAlign="center"
         marginTop={5}
         color="primary"
         >
-          Pour confirmez vontre présence
-      </Typography>
-      <Typography 
+          confirmez vontre présence avant le 26 juin
+      </Typography> */}
+      {/* <Typography 
         variant="subtitle2" 
         textAlign="center"
         marginTop={2}
@@ -99,10 +99,10 @@ const Guest = () => {
         sx={{marginBottom:'10px'}}
          >
           Veuillez remplir le formulaire s'il vous plait!
-      </Typography>
+      </Typography> */}
     </Grid>
     <FormGroup
-      style ={{width: '50%', margin:'0 auto', }}
+      style ={{width: '80%', margin:'0 auto', paddingTop:'2rem' }}
       onSubmit={handleSubmit}
       >
     <TextField
@@ -151,7 +151,7 @@ const Guest = () => {
             }}
             // className={classes.submit}
           >
-            Créer mon compte
+            Réserver
           </Button>
         </Grid>
       </FormGroup>
